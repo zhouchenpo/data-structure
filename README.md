@@ -1,2 +1,5 @@
-# data-structure
-Review some basic data structures
+# 数据结构
+## 链表
++ 新建链表
++ 添加元素
++ 删除元素
