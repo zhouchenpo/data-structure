@@ -66,4 +66,8 @@ public class SinglyLinkedList {
 
     public void deleteAll(int data) {
     }
+
+    public void clear() {
+        this.next = null;
+    }
 }

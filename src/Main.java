@@ -1,12 +1,15 @@
-import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
-        SinglyLinkedList myList = new SinglyLinkedList(new int[]{1, 2, 3, 4});
-        myList.printAll();
+        BinaryTree testTree = new BinaryTree(1);
+        testTree.addRightChild(3);
+        testTree.addLeftChild(2);
+        testTree.pre().printAll();
         System.out.println();
-        myList.addData(new int[]{5, 6, 7, 8});
-        myList.printAll();
+        testTree.in().printAll();
+        System.out.println();
+        testTree.post().printAll();
+        testTree.clearAfterTraversal();
 
     }
 }
