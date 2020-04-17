@@ -2,9 +2,9 @@ public class BinaryTree {
     private int data = 0;
     private BinaryTree leftChild = null;
     private BinaryTree rightChild = null;
-    private SinglyLinkedList preTemp = new SinglyLinkedList(-1);
-    private SinglyLinkedList inTemp = new SinglyLinkedList(-1);
-    private SinglyLinkedList postTemp = new SinglyLinkedList(-1);
+    private final SinglyLinkedList preTemp = new SinglyLinkedList(-1);
+    private final SinglyLinkedList inTemp = new SinglyLinkedList(-1);
+    private final SinglyLinkedList postTemp = new SinglyLinkedList(-1);
 
     public BinaryTree(int data) {
         this.data = data;

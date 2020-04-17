@@ -33,6 +33,7 @@ public class SinglyLinkedList {
     }
 
     public void addData(int data) {
+
         SinglyLinkedList temp = this;
         while (temp.next != null) {
             temp = temp.next;
@@ -53,6 +54,10 @@ public class SinglyLinkedList {
         }
     }
 
+    public void addDataAtBeginning(int data) {
+        this.next = new SinglyLinkedList(data);
+    }
+
     public void printAll() {
         SinglyLinkedList temp = this;
         while (temp != null) {
@@ -61,10 +66,32 @@ public class SinglyLinkedList {
         }
     }
 
-    public void reverse() {
+    public SinglyLinkedList reverse() {
+        SinglyLinkedList pre = null;
+        SinglyLinkedList curr = this;
+        while (curr != null) {
+            SinglyLinkedList next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
     }
 
-    public void deleteAll(int data) {
+    public SinglyLinkedList deleteAll(int data) {
+
+        SinglyLinkedList temp = new SinglyLinkedList(-1);
+        temp.next = this;
+        SinglyLinkedList head = temp;
+        while (temp.next != null) {
+            if (temp.next.data == data) {
+                temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
+            }
+        }
+        return head.next;
+
     }
 
     public void clear() {
